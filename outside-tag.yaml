@@ -1,0 +1,6 @@
+image:
+  tomcat:
+    repository: tomcat
+    tag: "7.0"
+
+
