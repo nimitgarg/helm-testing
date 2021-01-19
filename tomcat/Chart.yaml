@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: "8.0"
+deprecated: true
+description: DEPRECATED - Deploy a basic tomcat application server with sidecar as
+  web archive container -- Copied from original stable helm repo for testing only
+home: https://github.com/nimitgarg/helm-testing
+icon: http://tomcat.apache.org/res/images/tomcat.png
+name: tomcat
+version: 0.0.2

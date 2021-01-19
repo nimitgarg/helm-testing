@@ -3,7 +3,7 @@ entries:
   nginx-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-19T15:46:12.771727366+05:30"
+    created: "2021-01-19T16:41:23.789438312+05:30"
     description: A Helm chart for Kubernetes
     digest: 98f9b4390b0e25a8ad4c502a7e29f63f214ec6dff60f288db1697f254206ca5a
     name: nginx-test
@@ -14,7 +14,7 @@ entries:
   tomcat:
   - apiVersion: v1
     appVersion: "8.0"
-    created: "2021-01-19T15:46:12.772979718+05:30"
+    created: "2021-01-19T16:41:23.791485389+05:30"
     deprecated: true
     description: DEPRECATED - Deploy a basic tomcat application server with sidecar
       as web archive container -- Copied from original stable helm repo for testing
@@ -28,7 +28,7 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: "8.0"
-    created: "2021-01-19T15:46:12.772343231+05:30"
+    created: "2021-01-19T16:41:23.790530511+05:30"
     deprecated: true
     description: DEPRECATED - Deploy a basic tomcat application server with sidecar
       as web archive container -- Copied from original stable helm repo for testing
@@ -40,4 +40,4 @@ entries:
     urls:
     - tomcat-0.0.1.tgz
     version: 0.0.1
-generated: "2021-01-19T15:46:12.77091814+05:30"
+generated: "2021-01-19T16:41:23.788704175+05:30"
