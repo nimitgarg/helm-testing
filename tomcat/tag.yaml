@@ -1,6 +1,0 @@
-image:
-  tomcat:
-    repository: tomcat
-    tag: "6.0"
-
-
