@@ -1,6 +1,6 @@
 image:
   tomcat:
     repository: tomcat
-    tag: "7.0"
+    tag: "8.0"
 
 
