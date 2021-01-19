@@ -1,5 +1,5 @@
 apiVersion: v1
-appVersion: "7.0"
+appVersion: "8.0"
 deprecated: true
 description: DEPRECATED - Deploy a basic tomcat application server with sidecar as
   web archive container -- Copied from original stable helm repo for testing only
