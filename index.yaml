@@ -3,7 +3,21 @@ entries:
   tomcat:
   - apiVersion: v1
     appVersion: "8.0"
-    created: "2021-01-19T13:56:39.265681639+05:30"
+    created: "2021-01-19T13:59:22.959459199+05:30"
+    deprecated: true
+    description: DEPRECATED - Deploy a basic tomcat application server with sidecar
+      as web archive container -- Copied from original stable helm repo for testing
+      only
+    digest: d74b437e9ad63ed57ad22098c50a62796122d50af78fced2224c16a3544b547c
+    home: https://github.com/nimitgarg/helm-testing
+    icon: http://tomcat.apache.org/res/images/tomcat.png
+    name: tomcat
+    urls:
+    - tomcat-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
+    appVersion: "8.0"
+    created: "2021-01-19T13:59:22.958786525+05:30"
     deprecated: true
     description: DEPRECATED - Deploy a basic tomcat application server with sidecar
       as web archive container -- Copied from original stable helm repo for testing
@@ -15,4 +29,4 @@ entries:
     urls:
     - tomcat-0.0.1.tgz
     version: 0.0.1
-generated: "2021-01-19T13:56:39.264720413+05:30"
+generated: "2021-01-19T13:59:22.95797213+05:30"

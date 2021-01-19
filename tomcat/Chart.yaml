@@ -6,4 +6,4 @@ description: DEPRECATED - Deploy a basic tomcat application server with sidecar 
 home: https://github.com/nimitgarg/helm-testing
 icon: http://tomcat.apache.org/res/images/tomcat.png
 name: tomcat
-version: 0.0.1
+version: 0.0.2
