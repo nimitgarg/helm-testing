@@ -1,0 +1,215 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "4"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"test3","app.kubernetes.io/managed-by":"Helm","app.kubernetes.io/name":"nginx-test","app.kubernetes.io/version":"1.16.0","helm.sh/chart":"nginx-test-0.1.0"},"name":"test3-nginx-test","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app.kubernetes.io/instance":"test3","app.kubernetes.io/name":"nginx-test"}},"template":{"metadata":{"labels":{"app.kubernetes.io/instance":"test3","app.kubernetes.io/name":"nginx-test"}},"spec":{"containers":[{"image":"nginx:1.18","imagePullPolicy":"IfNotPresent","livenessProbe":{"httpGet":{"path":"/","port":"http"}},"name":"nginx-test","ports":[{"containerPort":80,"name":"http","protocol":"TCP"}],"readinessProbe":{"httpGet":{"path":"/","port":"http"}},"resources":{},"securityContext":{}}],"securityContext":{},"serviceAccountName":"test3-nginx-test"}}}}
+  creationTimestamp: "2021-01-19T12:41:31Z"
+  generation: 4
+  labels:
+    app.kubernetes.io/instance: test3
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: nginx-test
+    app.kubernetes.io/version: 1.16.0
+    helm.sh/chart: nginx-test-0.1.0
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/name: {}
+          f:spec:
+            f:containers:
+              k:{"name":"nginx-test"}:
+                .: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":80,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources: {}
+                f:securityContext: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2021-01-19T12:44:21Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-01-19T12:44:33Z"
+  name: test3-nginx-test
+  namespace: default
+  resourceVersion: "1694032"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/test3-nginx-test
+  uid: 5a900994-9861-4f58-af67-bcd8cf974518
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: test3
+      app.kubernetes.io/name: nginx-test
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: test3
+        app.kubernetes.io/name: nginx-test
+    spec:
+      containers:
+      - image: nginx:1.18
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: nginx-test
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        securityContext: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: test3-nginx-test
+      serviceAccountName: test3-nginx-test
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2021-01-19T12:41:35Z"
+    lastUpdateTime: "2021-01-19T12:41:35Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2021-01-19T12:41:31Z"
+    lastUpdateTime: "2021-01-19T12:44:33Z"
+    message: ReplicaSet "test3-nginx-test-575467d6f9" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 4
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
